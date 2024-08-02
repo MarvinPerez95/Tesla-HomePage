@@ -1,16 +1,40 @@
 ---
-
+import LandingHeader from "../Components/LandingHeader.astro";
+import MainSection from "../Components/MainSection.astro";
+import ModelY from "../Components/ModelY.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html>
+  <head>
+    <title>Tesla WebPage</title>
+  </head>
+  <LandingHeader />
+  <main class="snap-y snap-mandatory w-full h-screen relative overflow-auto">
+    <div class="snap-center">
+      <MainSection />
+    </div>
+    <div class="snap-center">
+      <ModelY />
+    </div>
+    <div class="snap-center">
+      <MainSection />
+    </div>
+    <div class="snap-center">
+      <ModelY />
+    </div>
+    <div class="snap-center">
+      <ModelY />
+    </div>
+    <div class="snap-center">
+      <ModelY />
+    </div>
+  </main>
+
+  <style is:global>
+    #font-face {
+      font-family: "Sans-serif";
+    }
+  </style>
+
+
 </html>
